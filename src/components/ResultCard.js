@@ -60,5 +60,5 @@ export const ResultCard = ({ movie }) => {
 };
 
 ResultCard.propTypes = {
-  movie: PropTypes.node.isRequired,
+  movie: PropTypes.object.isRequired,
 };

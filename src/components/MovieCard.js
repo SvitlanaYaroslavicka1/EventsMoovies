@@ -18,5 +18,5 @@ export const MovieCard = ({ movie, type }) => {
 };
 MovieCard.propTypes = {
   type: PropTypes.node.isRequired,
-  movie: PropTypes.node.isRequired,
+  movie: PropTypes.object.isRequired,
 };

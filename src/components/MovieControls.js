@@ -57,5 +57,5 @@ export const MovieControls = ({ type, movie }) => {
 
 MovieControls.propTypes = {
   type: PropTypes.node.isRequired,
-  movie: PropTypes.node.isRequired,
+  movie: PropTypes.object.isRequired,
 };
