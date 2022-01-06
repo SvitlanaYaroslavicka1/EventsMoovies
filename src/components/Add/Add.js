@@ -1,9 +1,13 @@
-import React, { useState } from 'react';
-import { ResultCard } from './ResultCard';
+import React, { useState, useContext } from 'react';
+import { ResultCard } from '../ResultCard/ResultCard';
+import { GlobalContext } from '../../context/GlobalState';
 
 export const Add = () => {
   const [query, setQuery] = useState('');
   const [results, setResults] = useState([]);
+
+  const { searchMovies } = useContext(GlobalContext);
+  const { search } = useContext(GlobalContext);
 
   const onChange = e => {
     e.preventDefault();
@@ -12,17 +16,9 @@ export const Add = () => {
     if (val.trim().length === 0) {
       setResults([]);
     } else {
-      fetch(
-        `https://api.themoviedb.org/3/search/movie?api_key=08d83ae460697a6af99ef26c1f3b0027&language=en-US&page=1&include_adult=false&query=${e.target.value}`,
-      )
-        .then(res => res.json())
-        .then(data => {
-          if (!data.errors) {
-            setResults(data.results);
-          } else {
-            setResults([]);
-          }
-        });
+      searchMovies(val.trim());
+      console.log(search);
+      setResults(search.results);
     }
   };
 

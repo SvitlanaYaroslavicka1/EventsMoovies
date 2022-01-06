@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { MovieControls } from './MovieControls';
+import { MovieControls } from '../MovieControls/MovieControls';
 
 export const MovieCard = ({ movie, type }) => {
   return (

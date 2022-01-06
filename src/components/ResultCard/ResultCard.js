@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import Moment from 'react-moment';
 import PropTypes from 'prop-types';
-import { GlobalContext } from '../context/GlobalState';
+import { GlobalContext } from '../../context/GlobalState';
 
 export const ResultCard = ({ movie }) => {
   const { addMovieToWatchlist, addMovieToWatched, watchlist, watched } =
