@@ -4,6 +4,7 @@ import { Header } from './components/Header/Header';
 import { Watchlist } from './components/Watchlist/Watchlist';
 import { Watched } from './components/Watched/Watched';
 import { Add } from './components/Add/Add';
+import { HomePage } from './components/HomePage/HomePage';
 import './App.css';
 import './lib/font-awesome/css/all.min.css';
 
@@ -17,6 +18,9 @@ function App() {
 
         <Switch>
           <Route exact path="/">
+            <HomePage />
+          </Route>
+          <Route exact path="/watchlist">
             <Watchlist />
           </Route>
           <Route path="/add">
