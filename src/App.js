@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { Header } from './components/Header/Header';
-import { Watchlist } from './components/Watchlist/Watchlist';
-import { Watched } from './components/Watched/Watched';
+import { Header } from './shared/Header/Header';
+import { Watchlist } from './providers/watchList';
+import { Watched } from './providers/watchedList';
 import { Add } from './components/Add/Add';
-import { HomePage } from './components/HomePage/HomePage';
+import { HomePage } from './providers/homepage';
 import './App.css';
 import './lib/font-awesome/css/all.min.css';
 

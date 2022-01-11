@@ -10,9 +10,9 @@ const initialState = {
   watched: localStorage.getItem('watched')
     ? JSON.parse(localStorage.getItem('watched'))
     : [],
-  search: localStorage.getItem('search')
-  ? JSON.parse(localStorage.getItem('search'))
-  : [],
+  homepage: localStorage.getItem('homepage')
+    ? JSON.parse(localStorage.getItem('watchlist'))
+    : [],
 };
 
 // create context
@@ -24,11 +24,14 @@ export const GlobalProvider = props => {
 
   useEffect(() => {
     localStorage.setItem('watchlist', JSON.stringify(state.watchlist));
+    localStorage.setItem('homepage', JSON.stringify(state.homepage));
     localStorage.setItem('watched', JSON.stringify(state.watched));
-    localStorage.setItem('search', JSON.stringify(state.search));
   }, [state]);
 
   // actions
+  const addMovieToHomepage = movie => {
+    dispatch({ type: 'ADD_MOVIE_TO_HOMEPAGE', payload: movie });
+  };
   const addMovieToWatchlist = movie => {
     dispatch({ type: 'ADD_MOVIE_TO_WATCHLIST', payload: movie });
   };
@@ -49,22 +52,18 @@ export const GlobalProvider = props => {
     dispatch({ type: 'REMOVE_FROM_WATCHED', payload: id });
   };
 
-  const searchMovies = query => {
-    dispatch({ type: 'SEARCH_MOVIES', payload: query });
-  };
-
   return (
     <GlobalContext.Provider
       value={{
         watchlist: state.watchlist,
         watched: state.watched,
-        search: state.search,
+        homepage: state.homepage,
         addMovieToWatchlist,
         removeMovieFromWatchlist,
         addMovieToWatched,
         moveToWatchlist,
         removeFromWatched,
-        searchMovies,
+        addMovieToHomepage,
       }}
     >
       {props.children}

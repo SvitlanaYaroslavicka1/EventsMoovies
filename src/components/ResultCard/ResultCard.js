@@ -2,6 +2,9 @@ import React, { useContext } from 'react';
 import Moment from 'react-moment';
 import PropTypes from 'prop-types';
 import { GlobalContext } from '../../context/GlobalState';
+import { titles } from '../../varibles/varibles';
+
+const { addToWatchListButtonTitle, watchedButtonTitle } = titles;
 
 export const ResultCard = ({ movie }) => {
   const { addMovieToWatchlist, addMovieToWatched, watchlist, watched } =
@@ -42,7 +45,7 @@ export const ResultCard = ({ movie }) => {
             disabled={watchlistDisabled}
             onClick={() => addMovieToWatchlist(movie)}
           >
-            Add to Watchlist
+            {addToWatchListButtonTitle}
           </button>
 
           <button
@@ -51,7 +54,7 @@ export const ResultCard = ({ movie }) => {
             disabled={watchedDisabled}
             onClick={() => addMovieToWatched(movie)}
           >
-            Add to Watched
+            {watchedButtonTitle}
           </button>
         </div>
       </div>
