@@ -1,8 +1,8 @@
 {
-  "name": "events-site",
+  "name": "",
   "version": "0.1.0",
-  "private": true,
-  "homepage": "https://Vladosik12333.github.io/events-site",
+  "private": false,
+  "homepage": "",
   "dependencies": {
     "@reduxjs/toolkit": "^1.7.1",
     "@testing-library/jest-dom": "^5.16.1",
@@ -68,7 +68,10 @@
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.26.1",
-    "eslint-plugin-sonarjs": "0.10.0"
+    "eslint-plugin-sonarjs": "0.10.0",
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/user-event": "^13.5.0"
   },
   "proxy": "http://localhost:5000"
 }

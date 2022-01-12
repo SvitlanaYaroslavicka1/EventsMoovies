@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { MovieCard } from '../MovieCard/MovieCard';
+import MovieCard from '../MovieCard/MovieCard';
 
 export const FilmList = ({
+  openModal,
   filmList,
   movieCardType,
   headerTitle,
@@ -22,7 +23,12 @@ export const FilmList = ({
         {filmList.length > 0 ? (
           <div className="movie-grid">
             {filmList.map(movie => (
-              <MovieCard movie={movie} key={movie.id} type={movieCardType} />
+              <MovieCard
+                openModal={openModal}
+                movie={movie}
+                key={movie.id}
+                type={movieCardType}
+              />
             ))}
           </div>
         ) : (
@@ -38,4 +44,5 @@ FilmList.propTypes = {
   movieCardType: PropTypes.string.isRequired,
   headerTitle: PropTypes.string.isRequired,
   noMoviesTitle: PropTypes.string.isRequired,
+  openModal: PropTypes.func.isRequired,
 };

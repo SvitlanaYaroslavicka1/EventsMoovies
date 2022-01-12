@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import { GlobalContext } from '../../context/GlobalState';
 
-export const MovieControls = ({ type, movie }) => {
+export const MovieControls = ({ openModal, type, movie }) => {
   const {
     removeMovieFromWatchlist,
     addMovieToWatched,
@@ -51,6 +51,16 @@ export const MovieControls = ({ type, movie }) => {
           </button>
         </>
       )}
+
+      <button
+        type="button"
+        onClick={() => {
+          openModal(movie);
+          console.log(11111);
+        }}
+      >
+        Open
+      </button>
     </div>
   );
 };
@@ -58,4 +68,5 @@ export const MovieControls = ({ type, movie }) => {
 MovieControls.propTypes = {
   type: PropTypes.node.isRequired,
   movie: PropTypes.object.isRequired,
+  openModal: PropTypes.func.isRequired,
 };
