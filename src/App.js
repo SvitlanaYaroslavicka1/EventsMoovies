@@ -6,7 +6,7 @@ import { Watched } from './providers/watchedList';
 import Modal from './components/Modal/Modal';
 import { Add } from './components/Add/Add';
 import { HomePage } from './providers/homepage';
-import './App.css';
+import './App.scss';
 import './lib/font-awesome/css/all.min.css';
 
 import { GlobalProvider } from './context/GlobalState';

@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import Moment from 'react-moment';
 import PropTypes from 'prop-types';
 import { GlobalContext } from '../../context/GlobalState';
-import { titles } from '../../varibles/varibles';
+import { titles } from '../../shared/varibles/varibles';
 
 const { addToWatchListButtonTitle, watchedButtonTitle } = titles;
 

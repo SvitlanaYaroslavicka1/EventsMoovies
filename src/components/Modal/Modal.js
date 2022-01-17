@@ -1,5 +1,5 @@
 import React from 'react';
-import './Modal.css';
+import './Modal.scss';
 import PropTypes from 'prop-types';
 import { createPortal } from 'react-dom';
 
@@ -21,7 +21,7 @@ const Modal = ({ closeModal, movie }) => {
               <li className="film-info__table-item">
                 <p className="film-info__table-line-title">Vote / Votes</p>
                 <span className="film-info__vote">{movie.vote_average}</span>/
-                <span clas="film-info__votes">{movie.vote_count}</span>
+                <span className="film-info__votes">{movie.vote_count}</span>
               </li>
               <li className="film-info__table-item">
                 <p className="film-info__table-line-title">Popularity</p>
@@ -30,13 +30,13 @@ const Modal = ({ closeModal, movie }) => {
                 </span>
               </li>
               <li className="film-info__table-item">
-                <p clasName="film-info__table-line-title">Original Title</p>
+                <p className="film-info__table-line-title">Original Title</p>
                 <span className="film-info__original-title">
                   {movie.original_title}
                 </span>
               </li>
               <li className="film-info__table-item">
-                <p clasName="film-info__table-line-title">Release Date</p>
+                <p className="film-info__table-line-title">Release Date</p>
                 <span className="film-info__popularity">
                   {movie.release_date}
                 </span>

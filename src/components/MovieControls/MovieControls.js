@@ -56,7 +56,6 @@ export const MovieControls = ({ openModal, type, movie }) => {
         type="button"
         onClick={() => {
           openModal(movie);
-          console.log(11111);
         }}
       >
         Open

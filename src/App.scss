@@ -1,21 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap");
 @import './shared/Header/Header.css';
-/* @import './components/Add/Add.scss'; */
+@import './components/Add/Add.scss';
 @import './components/ResultCard/ResultCard.css';
 @import './components/MovieCard/MovieCard.css';
 /* @import './shared/style/moviePage.css' */
+
 
 :root {
   --primary: #032541;
   --secondary: #21d07a;
   --white: #fff;
 }
+html {
+  height: 100%;
+}
 
 body {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   padding: 0;
   margin: 0;
-
+  min-height: 100%;
 }
 
 .container {
@@ -24,6 +28,7 @@ body {
   margin-right: auto;
   margin-left: auto;
 }
+
 
 @media (min-width: 768px) {
   .container {
@@ -76,6 +81,7 @@ input:focus {
   outline: none;
 }
 
+
 .results {
   padding: 0;
   margin: 0;
@@ -86,10 +92,11 @@ input:focus {
   list-style: none;
 }
 
+
+
 /* Movie Page */
 .movie-page {
   padding: 30px 0;
-  flex: 1 0 auto;
 }
 
 .movie-page .header {

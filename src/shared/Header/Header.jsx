@@ -12,7 +12,7 @@ export const Header = () => {
 
           <ul className="nav-links">
             <li>
-              <Link to="/watchlist">My moovies</Link>
+              <Link to="/watchlist">My movies</Link>
             </li>
 
             <li>
