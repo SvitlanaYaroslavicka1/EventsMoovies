@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { MovieControls } from '../MovieControls/MovieControls';
 
+
 const MovieCard = ({ openModal, movie, type }) => {
   return (
     <div className="movie-card">

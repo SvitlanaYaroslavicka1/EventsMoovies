@@ -1,10 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap");
-@import './shared/Header/Header.css';
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap');
+@import './shared/Header/Header.scss';
 @import './components/Add/Add.scss';
-@import './components/ResultCard/ResultCard.css';
-@import './components/MovieCard/MovieCard.css';
-/* @import './shared/style/moviePage.css' */
-
+@import './components/ResultCard/ResultCard.scss';
+@import './components/MovieCard/MovieCard.scss';
 
 :root {
   --primary: #032541;
@@ -16,7 +14,7 @@ html {
 }
 
 body {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   padding: 0;
   margin: 0;
   min-height: 100%;
@@ -28,7 +26,6 @@ body {
   margin-right: auto;
   margin-left: auto;
 }
-
 
 @media (min-width: 768px) {
   .container {
@@ -81,7 +78,6 @@ input:focus {
   outline: none;
 }
 
-
 .results {
   padding: 0;
   margin: 0;
@@ -91,8 +87,6 @@ input:focus {
 .results li {
   list-style: none;
 }
-
-
 
 /* Movie Page */
 .movie-page {
@@ -132,10 +126,10 @@ input:focus {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-  @media screen and (max-width: 375px) {
-    .movie-grid {
-      grid-template-columns: repeat(1, 1fr);
-    } 
+@media screen and (max-width: 375px) {
+  .movie-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 .movie-card .inner-card-controls {
